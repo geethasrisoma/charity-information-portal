@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Information Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Charity Information Portal</h1>
+        <p>Small acts of kindness can make a big difference.</p>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#charities">Charities</a>
+            <a href="#donate">Donation Interest</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Our Portal</h2>
+            <p>
+                Discover charities, learn about their activities,
+                and find ways to support their causes.
+            </p>
+        </section>
+
+        <section id="charities">
+            <h2>Available Charities</h2>
+            <p>Explore the following sample charity organizations.</p>
+
+            <div id="charity-list">
+                <article>
+                    <h3>Hope for Education</h3>
+                    <p>Category: Education</p>
+                    <p>Location: Hyderabad</p>
+                    <p>Helping children access educational resources.</p>
+                    <button type="button"
+                        onclick="selectCharity('Hope for Education')">
+                        Support This Charity
+                    </button>
+                </article>
+
+                <article>
+                    <h3>Food for Everyone</h3>
+                    <p>Category: Food</p>
+                    <p>Location: Warangal</p>
+                    <p>Supporting communities with food assistance.</p>
+                    <button type="button"
+                        onclick="selectCharity('Food for Everyone')">
+                        Support This Charity
+                    </button>
+                </article>
+
+                <article>
+                    <h3>Care for All</h3>
+                    <p>Category: Health</p>
+                    <p>Location: Nalgonda</p>
+                    <p>Promoting access to basic health support.</p>
+                    <button type="button"
+                        onclick="selectCharity('Care for All')">
+                        Support This Charity
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <section id="donate">
+            <h2>Donation Interest Form</h2>
+            <p>
+                Submit your interest in supporting a charity.
+                This form does not process payments.
+            </p>
+
+            <form id="donation-form">
+                <div>
+                    <label for="donor-name">Your Name:</label>
+                    <input type="text" id="donor-name"
+                        name="donorName" required>
+                </div>
+
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email"
+                        name="email" required>
+                </div>
+
+                <div>
+                    <label for="charity">Select Charity:</label>
+                    <select id="charity" name="charity" required>
+                        <option value="">Choose a charity</option>
+                        <option value="Hope for Education">
+                            Hope for Education
+                        </option>
+                        <option value="Food for Everyone">
+                            Food for Everyone
+                        </option>
+                        <option value="Care for All">
+                            Care for All
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="amount">
+                        Intended Donation Amount (optional):
+                    </label>
+                    <input type="number" id="amount"
+                        name="amount" min="1" step="0.01"
+                        placeholder="Enter amount in INR">
+                </div>
+
+                <div>
+                    <label for="message">Message (optional):</label>
+                    <textarea id="message" name="message"
+                        rows="4"></textarea>
+                </div>
+
+                <button type="submit">Submit Interest</button>
+            </form>
+
+            <p id="form-message" role="status"
+                aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Charity Information Portal</p>
+        <p>Making a difference through kindness.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
